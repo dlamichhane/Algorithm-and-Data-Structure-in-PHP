@@ -86,7 +86,7 @@ class LinkedList {
    */
   public function insert($val) {
     // Make sure element being inserted is type of Node.
-    if (!is_object($val) || getclass($val) !== "Node") {
+    if (!is_object($val) || gettype($val) !== "Node") {
       $node = new Node($val);
     } else {
       $node = $val;
